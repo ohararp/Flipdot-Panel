@@ -1,0 +1,12 @@
+[Unit]
+Description=Python Time client
+
+[Service]
+WorkingDirectory=/var/lib/cloud9/python/FlipDotOrig/
+ExecStart=/usr/bin/python LogicFlipShiftTime3.py
+SyslogIdentifier=PythonTime
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
